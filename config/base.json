@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "removeComments": true,
+    "sourceMap": true
+  },
+  "extends": [
+    "node_modules",
+    ".vscode"
+  ]
+}
