@@ -3,7 +3,7 @@
     "removeComments": true,
     "sourceMap": true
   },
-  "extends": [
+  "exclude": [
     "node_modules",
     ".vscode"
   ]
