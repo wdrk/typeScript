@@ -4,28 +4,15 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "echo",
-      "type": "shell",
-      "command": "echo Hello"
-    },
-    {
       "type": "typescript",
       "tsconfig": "taskrunner/tsconfig.json",
       "option": "watch",
-      "problemMatcher": [
-        "$tsc-watch"
-      ],
-      "group": "build",
+      "problemMatcher": ["$tsc-watch"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
       "label": "tsc: 감시 - taskrunner/tsconfig.json"
-    },
-    {
-      "type": "typescript",
-      "tsconfig": "taskrunner/tsconfig.json",
-      "problemMatcher": [
-        "$tsc"
-      ],
-      "group": "build",
-      "label": "tsc: 빌드 - taskrunner/tsconfig.json"
     }
   ]
 }
