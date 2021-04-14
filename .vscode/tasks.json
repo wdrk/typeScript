@@ -4,15 +4,14 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "type": "typescript",
-      "tsconfig": "taskrunner/tsconfig.json",
-      "option": "watch",
-      "problemMatcher": ["$tsc-watch"],
+      "label": "특정 .ts 파일을 ts-node로 실행해서 결과 보기",
+      "type": "shell",
+      "command": "ts-node ${file}",
       "group": {
         "kind": "build",
         "isDefault": true
       },
-      "label": "tsc: 감시 - taskrunner/tsconfig.json"
+      "problemMatcher": []
     }
   ]
 }
