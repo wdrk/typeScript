@@ -1,6 +1,18 @@
-// 전개 연산자를 이용해서 0개 이상의 매개변수를 전달하면 호출할 수 있는 함수를 선언
-function concat(...restParameter: any) {
-  return restParameter.join("");
-}
+{
+  function colors(a: string, ...rest: string[]): string {
+    return `${a} ${rest.join(" ")}`;
+  }
 
-console.log(concat("a", "b", 1, 2, true, false)); /* ab12truefalse */
+  const color1 = colors("red");
+  const color2 = colors("red", "orange");
+  const color3 = colors("red", "orange", "yellow");
+
+  console.log(`color1 = ${color1}
+  color2 = ${color2}
+  color3 = ${color3}`);
+  /*
+      color1 = red
+      color2 = red orange
+      color3 = red orange yellow 
+  */
+}
